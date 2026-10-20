@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1711" />
+    <meta name="description" content="Sugira uma música para o repertório da Esperança em 2027." />
+    <title>Sugestões de músicas · Esperança 2027</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" aria-label="Cabeçalho">
+        <a class="brand" href="#inicio" aria-label="Esperança Música — início">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>ESPERANÇA <span class="brand-light">MÚSICA</span></span>
+        </a>
+        <span class="header-year">REPERTÓRIO 2027</span>
+      </header>
+
+      <main id="inicio">
+        <section class="hero" aria-labelledby="page-title">
+          <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> SUA VOZ FAZ PARTE</div>
+          <h1 id="page-title">Uma canção pode<br /><span>tocar muitas vidas.</span></h1>
+          <p class="hero-copy">Tem uma música em mente para cantarmos juntos? Compartilhe sua sugestão com a equipe de música da Esperança.</p>
+        </section>
+
+        <section class="content-grid" aria-label="Formulário de sugestão de músicas">
+          <aside class="story-card">
+            <span class="section-label">NOSSO REPERTÓRIO</span>
+            <h2>Vamos construir<br />isso juntos.</h2>
+            <p>Cada sugestão nos ajuda a escolher canções para os momentos de louvor da nossa igreja.</p>
+            <div class="story-divider"></div>
+            <div class="story-note">
+              <span class="note-icon" aria-hidden="true">♪</span>
+              <span>Compartilhe a música e um vídeo para que possamos ouvi-la.</span>
+            </div>
+            <span class="decorative-note" aria-hidden="true">♪</span>
+          </aside>
+
+          <div class="form-card">
+            <span class="section-label">ENVIE SUA SUGESTÃO</span>
+            <h2>Sugira uma música</h2>
+            <p class="form-intro">Preencha os campos abaixo. Vamos ouvir sua sugestão com carinho.</p>
+
+            <form id="song-form" action="https://formsubmit.co/thedavimello@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Nova sugestão de música — Esperança 2027" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="field">
+                <label for="song-name">Nome da música <span aria-hidden="true">*</span></label>
+                <input id="song-name" name="Nome da música" type="text" placeholder="Ex.: Bondade de Deus" autocomplete="off" maxlength="150" required />
+              </div>
+
+              <div class="field">
+                <label for="song-url">Link do vídeo <span aria-hidden="true">*</span></label>
+                <input id="song-url" name="Link do vídeo" type="url" placeholder="https://youtube.com/..." inputmode="url" aria-describedby="url-hint" required />
+                <p class="field-hint" id="url-hint">Cole um link de vídeo para ouvirmos a música.</p>
+              </div>
+
+              <div class="field">
+                <label for="comments">Comentários adicionais <span class="optional">(opcional)</span></label>
+                <textarea id="comments" name="Comentários adicionais" rows="4" maxlength="1500" placeholder="Quer contar por que essa música é especial para você?"></textarea>
+              </div>
+
+              <button id="submit-button" class="submit-button" type="submit">
+                <span class="button-label">Enviar sugestão</span>
+                <span class="button-arrow" aria-hidden="true">↗</span>
+              </button>
+              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+              <p class="form-footnote">Sua sugestão será encaminhada à equipe de música da Esperança.</p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>ESPERANÇA BIBLE PRESBYTERIAN CHURCH</span>
+        <span>FEITO PARA CANTARMOS JUNTOS <span aria-hidden="true">✦</span></span>
+      </footer>
+    </div>
+  </body>
+</html>
